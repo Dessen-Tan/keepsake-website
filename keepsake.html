@@ -1,0 +1,55 @@
+<!DOCTYPE html> 
+<html>
+    <head> 
+        <link rel="stylesheet" href="style.css"> 
+    </head>	
+	<style>
+  		#walker {
+    		position: absolute;
+    		top: 50px;
+    		left: 0;
+   			width: 100px;
+    		transition: left 3s linear;
+  		}
+</style>
+    <body> 
+        <div class="topnav">
+              <a class="active" href="keepsake.html">Home</a>
+              <a href="intro.html">Experience</a>
+              <a href="gallary.html">Gallary</a>
+			  <a href="empty.html">Guestbook</a>
+        </div>
+        <p class="welcome">Welcome to</p>
+        <p class="title">Pibble's portfolio</p>
+
+		<body> 
+
+            <div class="b1">
+        	<div class="b3">
+            	<div class="b2">
+                	<p class="p1"><b>Pibble is a cool looking dog thats really tiny and chill. He enjoys eating, sleeping and falling over</b></p>
+            	</div>
+			</div>
+			<div class="b3">
+				<div class="b2">
+                	<p class="p1"><b>Soft skills: <br> - Eating <br> - Drinking and driving <br> - What is a soft skill</b></p>
+				</div>
+				<div class="b2">
+                	<p class="p1"><b>Hard skills: <br> - What's that <br> - Rocks are very </b></p>
+				</div>
+			</div>
+       			<img src="images/pibble/pibble1.jpg" alt="Pibble sounds" id="playAudioImage" style="cursor: pointer; width: 200px; height: auto;">
+
+        		<audio id="audio" src="audio/pibble.mp3"></audio>
+				<p class="p1"><b>Click the pibble for sounds</p>
+
+        		<script>
+            		document.getElementById('playAudioImage').addEventListener('click', function() {
+                	document.getElementById('audio').play();
+            		});
+        		</script>
+			</div>
+
+	
+		</body> 
+</html>

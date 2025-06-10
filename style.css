@@ -1,0 +1,384 @@
+html {
+  cursor: url("images/pibble-removebg-preview.png"), auto;
+}
+
+body {
+  text-align: center;
+  background-image: linear-gradient(#8785a2, #4c45af);
+  align-items: center;
+}
+.greentext {
+  color: green;
+}
+.topnav {
+  background-color: #333;
+  overflow: hidden;
+  position: relative;
+  z-index: 2; /* Ensures it's in front of the line */
+}
+
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 24px;
+  font-family: "YourCustomFont", serif;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: #04aa6d;
+  color: white;
+}
+@font-face {
+  font-family: "YourCustomFont";
+  src: url("milkyway-demo/Milkyway DEMO.woff") format("woff"),
+    url("milkyway-demo/Milkyway DEMO.woff2") format("woff2"),
+    url("milkyway-demo/Milkyway DEMO.ttf") format("truetype");
+}
+
+.title {
+  font-family: "YourCustomFont", serif;
+  font-size: 100px;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  color: #ffc7c7;
+  position: relative;
+  animation-name: bounce;
+  animation-duration: 0.8s;
+  animation-iteration-count: infinite;
+}
+@keyframes bounce {
+  0% {
+    top: 0px;
+  }
+  50% {
+    top: 10px;
+  }
+  100% {
+    top: 0px;
+  }
+}
+.welcome {
+  font-family: "YourCustomFont", serif;
+  font-size: 50px;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  margin-top: 20px;
+  color: #f6f6f6;
+  position: relative;
+  animation-name: bounce;
+  animation-duration: 0.8s;
+  animation-iteration-count: infinite;
+}
+.p1 {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #f6f6f6;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  background: linear-gradient(
+    270deg,
+    red,
+    orange,
+    yellow,
+    green,
+    blue,
+    indigo,
+    violet,
+    red
+  );
+  background-size: 1400% 1400%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: rainbowShift 10s linear infinite;
+}
+.b1 {
+  background-color: #797791;
+  border-radius: 20px;
+  padding: 5px;
+  margin-top: 15px;
+  width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  border-style: dashed;
+  border-width: 5px;
+  border-color: #605e74;
+}
+.b2 {
+  background-color: #6c6a81;
+  border-radius: 20px;
+  margin: 5px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.audio-button {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+.b3 {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* The actual timeline (the vertical ruler) */
+.timeline {
+  position: relative;
+  max-width: 1200px;
+  margin-bottom: auto;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 0;
+}
+
+/* The actual timeline (the vertical ruler) */
+.timeline::after {
+  content: "";
+  position: absolute;
+  width: 6px;
+  background-color: #fff;
+  top: 0;
+  bottom: 20px; /* Adjust to leave space for the arrow */
+  left: 50%;
+  margin-left: -3px;
+}
+
+.timeline-arrow {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  margin-left: -15px;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 20px 15px 0 15px;
+  border-color: #fff transparent transparent transparent;
+  z-index: 1;
+}
+
+/* Container around content */
+.container {
+  padding: 10px 40px;
+  position: relative;
+  background-color: inherit;
+  width: 50%;
+  margin-top: 60px;
+}
+
+/* The circles on the timeline */
+.container::after {
+  content: "";
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  right: -17px;
+  background-color: #fff;
+  border: 4px solid #04aa6d;
+  top: 15px;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+/* Place the container to the left */
+.left {
+  left: 0;
+}
+
+/* Place the container to the right */
+.right {
+  left: 50%;
+}
+
+/* Add arrows to the left container (pointing right) */
+.left::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  right: 30px;
+  border: medium solid #fff;
+  border-width: 10px 0 10px 10px;
+  border-color: transparent transparent transparent #fff;
+}
+
+/* Add arrows to the right container (pointing left) */
+.right::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  left: 30px;
+  border: medium solid #fff;
+  border-width: 10px 10px 10px 0;
+  border-color: transparent #fff transparent transparent;
+}
+
+/* Fix the circle for containers on the right side */
+.right::after {
+  left: -16px;
+}
+
+/* The actual content */
+.content {
+  padding: 20px 30px;
+  background-color: #797791;
+  position: relative;
+  border-radius: 6px;
+  color: #f6f6f6;
+  font-size: 15px;
+  border: #605e74 2px solid;
+}
+
+/* Media queries - Responsive timeline on screens less than 600px wide */
+@media screen and (max-width: 600px) {
+  /* Place the timelime to the left */
+  .timeline::after {
+    content: "";
+    position: absolute;
+    width: 6px;
+    background-color: #fff;
+    top: -100px; /* or -50px depending on your nav height */
+    bottom: 20px;
+    left: 50%;
+    margin-left: -3px;
+    z-index: 0; /* Lower than .topnav */
+  }
+
+  /* Full-width containers */
+  .container {
+    width: 100%;
+    padding-left: 70px;
+    padding-right: 25px;
+  }
+
+  /* Make sure that all arrows are pointing leftwards */
+  .container::before {
+    left: 60px;
+    border: medium solid white;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent white transparent transparent;
+  }
+
+  /* Make sure all circles are at the same spot */
+  .left::after,
+  .right::after {
+    left: 15px;
+  }
+
+  /* Make all right containers behave like the left ones */
+  .right {
+    left: 0%;
+  }
+}
+
+.content:hover {
+  background-color: #8c8aa1;
+  transform: scale(1.03);
+  box-shadow: 0 8px 16px rgba(130, 127, 127, 0.2);
+  transition: all 0.3s ease;
+}
+
+.b4 {
+  background-color: #797791;
+  border-radius: 20px;
+  padding: 5px;
+}
+
+.image {
+  width: 20%;
+  height: auto;
+  border-radius: 20px;
+  margin-top: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.p2 {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #f6f6f6;
+  font-size: 20px;
+  margin-top: 10px;
+  text-align: center;
+}
+
+@keyframes rainbowShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.body2 {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden;
+    color: white;
+}
+
+h1 {
+    background: #7F7FD5;
+    background: -webkit-linear-gradient(to right, #91EAE4, #86A8E7, #7F7FD5);
+    background: linear-gradient(to right, #91EAE4, #86A8E7, #7F7FD5);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.container2 {
+    height: 100%;
+    display: flex;
+}
+
+#toolbar {
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+    width: 70px;
+    background-color: #202020;
+}
+
+#toolbar * {
+    margin-bottom: 6px;
+}
+
+#toolbar label {
+    font-size: 12px;
+}
+
+#toolbar input {
+    width: 100%;
+}
+
+#toolbar button {
+    background-color: #1565c0;
+    border: none;
+    border-radius: 4px;
+    color:white;
+    padding: 2px;
+}

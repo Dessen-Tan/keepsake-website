@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="body2">
+    <div class="topnav">
+      <a href="keepsake.html">Home</a>
+      <a href="intro.html">Experience</a>
+      <a href="gallary.html">Gallary</a>
+	  <a class="active" href="empty.html">Guestbook</a>
+	</div>
+		<section class="container2">
+  		<div id="toolbar">
+   			<h1>Draw.</h1>
+    		<label for="stroke">Stroke</label>
+    		<input id="stroke" name="stroke" type="color" />
+   		 	<label for="lineWidth">Line Width</label>
+    		<input id="lineWidth" name="lineWidth" type="number" value="5" />
+    		<button id="clear">Clear</button>
+			<p class="p12">Sign and let pibble know you dropped by</p>
+  		</div>
+  		<div class="drawing-board">
+    		<canvas id="drawing-board"></canvas>
+ 		</div>
+	</section>
+    <script src="index.js"></script>
+
+  </body>
+</html>
